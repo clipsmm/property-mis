@@ -1,0 +1,20 @@
+{
+    "name": "vendor_name/package_name",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Nancy Howlette",
+            "email": "email@example.com"
+        }
+    ],
+    "require" : {
+    "dompdf/dompdf" : "0.6.*"
+  },
+    "autoload": {
+        "psr-4": {
+            "Entity\\" : "Vendor/myproject/src"
+        }
+    }
+}

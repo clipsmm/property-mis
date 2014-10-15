@@ -1,0 +1,28 @@
+body{
+    margin-left: 10%;
+    margin-right:10%;
+}
+.notepad{
+    background-image: url(../img/write-back.jpg);
+    background-repeat: no-repeat;
+    min-width:40%;
+    min-height: 400px;
+    padding-top:-7px;
+
+}
+.notepad form{
+    position:inherit;;
+    width:100%;
+    height:100%;
+}
+.login{
+    width:400px;
+    margin-left:20%;
+    padding-top:15%;padding-left: 2%;
+}
+#notepad{
+    background:transparent;
+    height:300px;
+    width:100%;
+    border:none;
+}
