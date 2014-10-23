@@ -1,7 +1,7 @@
 <div id="myModal2" class="span12 modal message hide fade">
     <form  action="" method="post">
         <fieldset>
-            <legend>Add New Staff</legend>
+            <legend>Add New Client</legend>
             <div class="row">
                 <div class="span6">
                     <div class="control-group">
@@ -78,7 +78,7 @@
                     <div class="control-group">
                         <div class="controls">
                             <div class="control-group">
-                                <button type="submit" class="btn btn-primary" id="register-submit-btn">Add Staff</button>
+                                <button type="submit" class="btn btn-primary" id="register-submit-btn">Add Client</button>
                             </div>
                         </div>
                     </div>

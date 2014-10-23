@@ -39,6 +39,5 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST')){
     </div>
 
 </div>
-<a href="rooms">Rooms</a>
 <?php
 include 'gui/footer.php';

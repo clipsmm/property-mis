@@ -1,9 +1,4 @@
-
-<!-- BEGIN LOGO -->
-<?php logo() ?>
-<!-- END LOGO -->
-
-
+<div id="myModal2" class="span12 modal message hide fade">
 <form  action="" method="post">
     <fieldset>
         <legend>Create Account</legend>
@@ -24,7 +19,8 @@
                 </div>
             </div>
         </div>
-
+        <input type="hidden" value="create" name="create">
+		<input type="hidden" value="<?php echo $_SESSION['nonce'] ?>" name="nonce">
         <div class="control-group">
             <div class="controls">
                 <div class="input-prepend">
@@ -64,22 +60,10 @@
         <div class="control-group">
             <div class="controls">
                 <div class="control-group">
-                        <label class="checkbox">
-                            <input type="checkbox" required="" name="create"><span class="metro-checkbox">Remember me</span>
-                        </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <div class="controls">
-                <div class="control-group">
-                    <a href="login" class="btn btn-link">Login</a>
                     <button type="submit" class="btn btn-primary" id="register-submit-btn">Create Account</button>
                 </div>
             </div>
         </div>
     </fieldset>
 </form>
-
-<?php copyright() ?>
+</div>

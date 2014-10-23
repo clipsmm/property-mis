@@ -9012,3 +9012,7 @@ ul#wizard-steps li a {
 .login{
   background: #F7F7F7;
 }
+
+#canvas-holder{
+    width:30%;
+}

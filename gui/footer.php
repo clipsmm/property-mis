@@ -17,20 +17,23 @@
 
 <script type="text/javascript">
 
-    $('.panorama').panorama({
-        //nicescroll: false,
-        showscrollbuttons: true,
-        keyboard: true,
-        parallax: true
-    });
+   $(document).ready(function(){
+       $('.panorama').panorama({
+           //nicescroll: false,
+           showscrollbuttons: true,
+           keyboard: true,
+           parallax: true
+       });
 
-    $('#cmdDel').click(function(){
-        $('#frmTable').submit();
-    });
+       $('#cmdDel').click(function(){
+           $('#frmTable').submit();
+       });
 
-    $('#search').click(function(){
-    	$('#frmSearch').toggle();
-    });
+       $('#search').click(function(){
+           $('#frmSearch').toggle();
+       });
+       $('.table').dataTable();
+   });
 </script>
 </body>
 <!-- END BODY -->

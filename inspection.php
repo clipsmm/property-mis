@@ -115,8 +115,8 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                                                 <input name="data[]" value="<?php echo $entity['id'] ?>" type="checkbox"><span class="metro-checkbox"></span>
                                             </label>
                                         </td>
-                                        <td class="span2"><?php echo $entity['prop_id']?></td>
-                                        <td class="span2"><?php echo $entity['staff_id']?></td>
+                                        <td class="span2"><?php echo $em->getEntityDetail('property',$entity['prop_id'],'prop_name')?></td>
+                                        <td class="span2"><?php echo $em->getEntityDetail('staff',$entity['staff_id'],'staff_first_name')?></td>
                                         <td class="span2"><?php echo $entity['ins_date']?></td>
                                         <td class="span2"><?php echo $entity['ins_status']?></td>
                                         <td class="span2"><a class="btn btn-primary"

@@ -33,7 +33,7 @@ class Database {
             $this->dbConnect = true;
             $this->dbConnection = $con;
         }else{
-            echo mysql_error()."<br>".$this->dbUser;
+            echo mysql_error()."<br>";
         }
     }
 

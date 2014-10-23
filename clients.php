@@ -11,6 +11,7 @@ use Entity\Client;
 require 'gui/head.php';
 $em = $system->getDatabaseManager();
 $departments = $em->getRawEntity('department');
+$err = 0;
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create']) && $_POST['create'] == "create"){
     $err = 0;
     if(!isset($_POST['firstName'])){
@@ -75,6 +76,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create']) && $_POST['c
     }else{
         $msgs = $err.": Please fill all fields!";
     }
+}elseif ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete']) && $_POST['delete'] == "delete"){
+    if(!isset($_POST['data'])){
+        $err +=1;
+        $msgs = 'Please select a record to delete';
+    }else{
+        $data = $_POST['data'];
+        $data = join(',',$data);
+        $client = new Client();
+        $client->setId($data);
+        $msgs =  $client->deleteClient();
+    }
 }
 $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
 ?>
@@ -96,7 +108,9 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                 
                 <div class="row">
                     <div class="span12">
-
+                    <form action=""  method="post" id="frmTable">
+                        <input type="hidden" name="delete" value="delete">
+                        <input type="hidden" name="nonce" value="<?php echo $_SESSION['nonce'] ?>">
                         <table class="table table-condensed table-hover">
                             <thead>
                             <tr>
@@ -133,7 +147,7 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                                 <tr>
                                     <td class="align-center">
                                         <label class="checkbox">
-                                            <input type="checkbox"><span class="metro-checkbox"></span>
+                                            <input name="data[]" value="<?php echo $entity['id'] ?>" type="checkbox"><span class="metro-checkbox"></span>
                                         </label>
                                     </td>
                                     <td class="span2"><?php echo $entity['client_first_name']?></td>
@@ -155,7 +169,7 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
 
                             </tbody>
                         </table>
-
+                        </form>
                     </div>
                 </div>
             </div>

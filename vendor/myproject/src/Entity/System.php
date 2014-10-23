@@ -52,7 +52,7 @@ class System {
              $res = $em->persist();
             $em->flush();
 
-            $this->redirect('login?msg=success');
+            return 'account created successfully!';
 
         }else{
             return $this->errors['reg'];
@@ -112,7 +112,6 @@ class System {
             $hash = hash('sha256',$password);
             // hash the password with the unique salt.
             $password = hash('sha256', $salt.$hash);
-
             if (count($user) == 1 && $active == true) {
                     if ($db_password == $password) {
                         $user_browser = $_SERVER['HTTP_USER_AGENT'];
@@ -129,7 +128,7 @@ class System {
                         $this->redirect('index');
                     }
 
-            } else {
+            }else {
                 // No user exists.
                # $this->redirect('login?msg=false');
             }

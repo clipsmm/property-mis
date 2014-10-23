@@ -33,13 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create']) && $_POST['c
     $err = 0;
     if(!isset($_POST['paid'])){
         $err += 1;
-        echo "padi";
     }else{
         $paid = stripslashes($_POST['paid']);
     }
     if(!isset($_POST['date'])){
         $err += 1;
-        echo "date";
     }else{
         $date= stripslashes($_POST['date']);
     }
@@ -70,7 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create']) && $_POST['c
         $data = join(',',$data);
         $ren= new RentPayment();
         $ren->setId($data);
-        echo "<hr>".$data;
         $msgs = $ren->deleteRentPayment();
     }
 }
@@ -104,14 +101,14 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                         <form action=""  method="post" id="frmTable">
                             <input type="hidden" name="delete" value="delete">
                             <input type="hidden" name="nonce" value="<?php echo $_SESSION['nonce'] ?>">
-                            <table class="table table-condensed table-hover">
+                            <table class="table table-condensed table-hover pricing-table">
                                 <thead>
                                 <tr>
                                     <th class="span1"></th>
-                                    <th class="span2">Tenant</th>
-                                    <th class="span2">Property</th>
-                                    <th class="span2">Date In</th>
-                                    <th class="span2">Date Out</th>
+                                    <th class="span2">Date Paid</th>
+                                    <th class="span2">Rent Fee</th>
+                                    <th class="span2">Amount Paid</th>
+                                    <th class="span2">Balance</th>
                                     <th class="span2"></th>
 
                                 </tr>
@@ -161,13 +158,14 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                                    $var = $em->fetch($vars);
                                 ?>
                                 </tbody>
-                                <tr>
+                                <tfoot>
+                                <tr class="">
                                     <td colspan="2">Payments: <?php echo $var['receipts']?></td>
                                     <td><?php echo $var['totalE']?></td>
                                     <td><?php echo $var['totalP']?></td>
                                     <td><?php echo $var['totalB']?></td>
                                 </tr>
-
+                                </tfoot>
                             </table>
                         </form>
                     </div>

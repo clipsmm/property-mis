@@ -61,7 +61,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <div class="control-group">
-                            <button type="submit" class="btn btn-primary" id="register-submit-btn">Insert</button>
+                            <button type="submit" class="btn btn-primary" id="register-submit-btn">Save</button>
                         </div>
                     </div>
                 </div>

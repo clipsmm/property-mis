@@ -116,7 +116,7 @@ class Rent extends System{
     public function updateRent(){
         $em = $this->getDatabaseManager();
         $em->query("
-        INSERT INTO rent
+        INSERT rent SET
         tenant_id='$this->tenantId',prop_id='$this->propId',date_in='$this->dateIn',
         date_out='$this->dateOut'
         WHERE id='$this->id'

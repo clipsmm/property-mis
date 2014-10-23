@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create']) && $_POST['c
                     <div class="control-group">
                         <div class="controls">
                             <div class="input-prepend">
-                                <span class="add-on">Category</span>
+                                <span class="add-on">County</span>
                                 <select type="text" name="county" required="">
                                     <?php
                                     while ($county= $em->fetch($counties)){

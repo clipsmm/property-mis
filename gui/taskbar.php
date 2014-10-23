@@ -13,11 +13,6 @@
                         <span class="win-commandicon win-commandring icon-reload"></span>
                         <span class="win-label">Reload</span>
                     </button>
-
-                    <button class="win-command">
-                        <span class="win-commandicon win-commandring icon-email"></span>
-                        <span class="win-label">Send Email</span>
-                    </button>
                     <?php  include 'gui/search_form.php' ?>
                     
                 </div>

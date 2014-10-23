@@ -28,5 +28,5 @@ include '/system/modules/init.php';
 require "/system/modules/myFunctions.php";
 
 require 'vendor/autoload.php';
-
+$roles = array('USER','ADMIN');
 $system = new \Entity\System();

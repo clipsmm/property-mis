@@ -1,12 +1,12 @@
 {
-    "name": "vendor_name/package_name",
-    "description": "description_text",
+    "name": "nancyotieno/remis",
+    "description": "a property management information system",
     "minimum-stability": "stable",
     "license": "proprietary",
     "authors": [
         {
             "name": "Nancy Howlette",
-            "email": "email@example.com"
+            "email": "nancyotieno@gmail.com"
         }
     ],
     "require" : {

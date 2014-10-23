@@ -6,6 +6,7 @@ if (!isset($_SESSION['username'])){
 }
 
 require $_SERVER['DOCUMENT_ROOT']. "/remis/config.php";
+if (!$system->hasRole('ADMIN')) {$system->redirect('index');}
 $page = 'department';
 use Entity\Department as Department;
 require 'gui/head.php';

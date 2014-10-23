@@ -76,6 +76,12 @@ require 'gui/head.php';
                     </div>
                     <div class="app-label">Agents</div>
                 </a>
+                <a class="tile app bg-color-teal" href="tenant">
+                    <div class="image-wrapper">
+                        <span class="icon icon-clipboard"></span>
+                    </div>
+                    <div class="app-label">Tenants</div>
+                </a>
 
             </div>
 

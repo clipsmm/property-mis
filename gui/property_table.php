@@ -45,8 +45,8 @@
                                 </label>
                             </td>
                             <td class="span2"><?php echo $entity['prop_name']?></td>
-                            <td class="span2"><?php echo $entity['type_id']?></td>
-                            <td class="span2"><?php echo $entity['client_id']?></td>
+                            <td class="span2"><?php echo $em->getEntityDetail('proptype', $entity['type_id'],'type_name')?></td>
+                            <td class="span2"><?php echo $em->getEntityDetail('client',$entity['client_id'],'client_first_name')?></td>
                             <td class="span2"><?php echo $entity['prop_rooms']?></td>
                             <td class="span2"><?php echo $entity['prop_area']?></td>
                             <td class="span2"><?php echo $entity['rent_price']?></td>

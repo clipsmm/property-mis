@@ -18,17 +18,7 @@
     </div>
     <div class="control-group">
         <div class="controls">
-            <label class="checkbox">
-                <input type="checkbox"><span class="metro-checkbox">Remember me</span>
-            </label>
-            <button type="submit" class="btn">Sign in</button>
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <a class="btn btn-link" href="register">Create Account</a>
-            or
-            <a class="btn btn-link" href="register">Retrieve password</a>
+            <button type="submit" class="btn bg-color-green btn-large">Sign in</button>
         </div>
     </div>
     </div>

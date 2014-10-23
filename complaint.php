@@ -123,7 +123,7 @@ $_SESSION['nonce'] = $nonce = md5('salt'.microtime());
                                     <td class="span2"><?php echo $entity['cmp_title']?></td>
                                     <td class="span2"><?php echo $entity['cmp_cat']?></td>
                                     <td class="span2"><?php echo $entity['cmp_date']?></td>
-                                    <td class="span2"><?php echo $entity['client_id']?></td>
+                                    <td class="span2"><?php echo $em->getEntityDetail('client',$entity['client_id'],'client_first_name')?></td>
                                     <td class="span2"><?php echo $entity['cmp_view']?></td>
                                     <td class="span2"><a class="btn btn-primary"
                                                          href="edit.php?table=complaint&id=<?php echo $entity['id'] ?>">
